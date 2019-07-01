@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js ie6 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie8 lt-ie9"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Automarket - Añadir oferta</title>
+	<meta name="description" content="Automarket">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/uniform.default.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="js/vendor/jquery-1.8.2.min.js"></script>
+	<script src="js/vendor/selectivizr.js"></script>
+	<script src="js/vendor/PIE.js"></script>
+	<script src="js/plugins/jquery.placeholder.min.js"></script>
+	<script src="js/plugins/jquery.uniform.min.js"></script>
+	<script src="js/plugins/jquery.flexslider-min.js"></script>
+	<script src="js/plugins/jquery.carouFredSel-6.1.0-packed.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="js/plugins/jquery.prettyPhoto.js"></script>
+	<script src="js/plugins/jquery.countdown.js"></script>
+	
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<header>
+	<div class="content-holder">
+		<div class="layer-one">
+			<div class="page-titles">
+				<h1><a href="index.html">Automarket</a></h1>
+				<p class="sub-title">This is a title</p>
+			</div>
+				
+			<div class="dealer-login">
+				<a href="dealer-details.html" class="dealer-name">Dealer Name</a>
+				<a href="#" class="sign-out">Sign Out</a>
+			</div>
+				
+			<div class="header-buttons">
+				<a href="add-vehicle.html" class="add-an-offer rounded-link-box"><span class="box-content"><strong class="plus-sign">+</strong>&nbsp;Add An Offer</span></a>
+				<div class="pages-top rounded-link-box">
+					<a href="#" class="box-content">Pages</a>
+					<ul>
+						
+                        <li><a href="index.html">Home page</a></li>
+                        
+                        <li><a href="add-vehicle.html">Add an offer</a></li>
+                        
+                        <li><a href="log-in.html">Log in page</a></li>
+                        
+                        <li><a href="car-list.html">Car list</a>
+							<ul>
+								<li><a href="car-details.html">Car details</a><li>														
+							</ul>
+						</li>
+						
+                        <li><a href="blog-overview.html">Blog</a>
+							<ul>
+								<li><a href="blog-post.html">Blog post</a><li>														
+							</ul>
+						</li>
+						<li><a href="dealer-list.html">Dealer list</a>
+                        <ul>
+								<li><a href="dealer-details.html">Dealer details</a><li>														
+							</ul>
+						</li>
+                        
+						<li><a href="insurance.html">Insurance</a></li>
+						
+                        <li><a href="under-construction.html">Under construction</a></li>
+                        
+                        <li><a href="contact-us.html">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!--.layer-one-->
+			
+		<div class="layer-two">
+			<nav>
+				<ul>
+					<li class="nav-cars current-item"><a href="car-list.html">Autos</a></li>
+					<li class="nav-bike"><a href="#">Motos</a></li>
+					<li class="nav-truck"><a href="#">Camiones</a></li>
+					<li class="nav-parts"><a href="#">Autopartes</a></li>
+				</ul>
+			</nav>
+				
+			<form id="header-search" action="http://clapat.ro/themes/automarket/orange/car-list.html" method="post">
+				<input type="text" name="quick_search" onfocus="if(this.value == 'Quick Search, Ex: Mercedes-Benz E220') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Quick Search, Ex: Mercedes-Benz E220'; }" value="Quick Search, Ex: Mercedes-Benz E220" class="quick-search" >
+				<select name="type-option">
+					<option value="cars" selected="selected">Auto</option>
+					<option value="bikes">Motos</option>
+					<option value="trucks">Caminones</option>
+					<option value="Parts">Autopartes</option>
+				</select>
+				<div class="search-submit">
+					<input type="submit" value="buscar"/>
+				</div>
+			</form>
+		</div><!--.layer-two-->
+	</div>
+		
+</header>
+	
+<div id="page-content">
+
+	<section id="car-pagination">
+		<div class="content-holder">
+			<div class="page-main-heading extra-space">
+				<div class="heading-location">
+					<h2><span class="bold">Sell your vehicle</span></h2>
+					<p class="page-location">
+						<a href="index.html">Home </a>
+						<span class="greater-than">&gt;&gt;</span>
+						<a href="#">Add an offer</a>
+					</p>
+				</div>
+			</div>
+			
+			<nav class="default-tabs split-tabs">
+				<ul>
+					<li class="current-item"><a href="#"><span> Nueva Oferta</span></a></li>
+							</ul>
+			</nav>
+			
+		</div>
+	</section><!--#car-pagination -->
+		
+	<section id="sell-your-vehicle">
+		<div class="content-holder">
+			<div class="full-width light-grey-corner-box box-text-default">
+				<h3>Sell ​​your car on <strong>AutoMarket </strong>and benefit from more than 1 million potential buyers every month!</h3>
+				<p>Required fields are marked with * </p>
+				<p>Please post offers only on the car (parts are a special category).</p>
+				<p>If you are a dealer, please visit the dealers section</p>
+				<p>If you have difficulties in posting an offer on the website, please call 0742 016 570</p>
+			</div>
+			
+			<div class="full-width sell-form <!--options-form-->">
+				<form action="php/cargar_auto.php" method="post">
+					<fieldset id="vehicle-data">
+						<legend><span class="bold">Datos del</span> Vehiculo</legend>
+						<ul class="field-content">
+							<li class="select-four">
+								<div>
+									<label for="select-manufacturer" >Marca: <span class="mandatory">*</span></label>
+									<select id="seleccion-marca" name="marca">
+										<option selected="selected">Seleccionar</option>
+										<option value="fiat">Fiat</option>
+										<option value="chevrolet">Chevrolet</option>
+										<option value="toyota">Toyota</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-model">Modelo: <span class="mandatory">*</span></label>
+									<select id="select-model">
+										<option selected="selected">Select</option>
+										<option value="option1">Option 1</option>
+										<option value="option1">Option 2</option>
+										<option value="option1">Option 3</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-fabrication">Año de Fabricacion: <span class="mandatory">*</span></label>
+									<select id="select-fabrication">
+										<option selected="selected">Select</option>
+										<option value="option1">Option 1</option>
+										<option value="option1">Option 2</option>
+										<option value="option1">Option 3</option>
+									</select>
+								</div>
+							</li>
+							
+							<li class="select-four">
+								<div>
+									<label for="select-fuel-type">Tipo de combustible: <span class="mandatory">*</span></label>
+									<select id="select-fuel-type">
+										<option selected="selected">Seleccionar</option>
+										<option value="option1">Naftero</option>
+										<option value="option1">Diesel</option>
+										<option value="option1">Gnc</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-transmission">Transmision: <span class="mandatory">*</span></label>
+									<select id="select-transmission">
+										<option selected="selected">Select</option>
+										<option value="option1">Option 1</option>
+										<option value="option1">Option 2</option>
+										<option value="option1">Option 3</option>
+									</select>
+								</div>
+								<div>
+									<label for="select-doors">Cilindradas (en cm³)<span class="mandatory">*</span></label>
+									<select id="select-doors">
+									  <option selected="selected">Select</option>
+										<option value="option1">Option 1</option>
+										<option value="option1">Option 2</option>
+										<option value="option1">Option 3</option>
+									</select>
+								</div>
+							</li><!-- line #2 -->
+							
+							<li class="select-four"></li><!-- line #3 -->
+						</ul>
+					</fieldset>
+					
+					<fieldset id="vehicle-equipment" class="checkbox-selection">
+						
+					</fieldset>
+					
+					<fieldset id="vehicle-description">
+						<legend><span class="bold">Descripcion</span> del Vehiculo</legend>
+						<div class="field-content">
+							<label for="vehicle-description-field">Ingrese algun texto:</label>
+							<textarea id="vehicle-description-field" name="description" class="description"></textarea>
+						</div>
+					</fieldset>
+					
+					<fieldset id="vehicle-registration">
+						
+</fieldset>
+					
+					<fieldset id="vehicle-condition">
+						<legend><span class="bold">Condicion</span> del Vehiculo</legend>
+						<ul class="field-content">
+							<li class="select-four">
+								<div>
+									<label for="select-technical-condition">Condicion tecnica: <span class="mandatory">*</span></label>
+									<select id="select-technical-condition">
+										<option selected="selected">Select</option>
+										<option value="option1">Option 1</option>
+										<option value="option1">Option 2</option>
+										<option value="option1">Option 3</option>
+									</select>
+								</div>
+								<div>
+									<label for="input-kilometers">Kilometros: <span class="mandatory">*</span></label>
+									<input type="text" name="chassis_number" id="input-kilometers" class="default-input" />
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					
+					<fieldset id="vehicle-price">
+						<legend><span class="bold">Precio</span> del Vehiculo</legend>
+						<ul class="field-content">
+							<li class="select-four">
+								<div>
+									<label for="input-price">Precio: <span class="mandatory">*</span></label>
+									<input type="text" name="chassis_number" id="input-price" class="default-input" />
+								</div>
+								<div>
+									<label for="select-currency">Moneda: <span class="mandatory">*</span></label>
+									<select id="select-currency">
+										<option selected="selected">Pesos</option>
+										<option value="option1">Dolar</option>
+										
+									</select>
+								</div>
+								<div class="checkbox-custom">
+									<div><input type="checkbox" value="checkbox_abs" id="check-price-negotiable"/></div>
+									<label for="check-price-negotiable">&nbsp; Precio negociable</label>
+								</div>
+							</li>
+						</ul>
+					</fieldset>
+					
+					<fieldset id="vehicle-photos">
+						<legend><span class="bold">Fotos</span> Del Vehiculo</legend>
+						<ul class="field-content">
+							<li class="select-six">
+								<div class="upload-file-container">
+									<span>
+										<input type="file" name="files[]" />
+									</span>
+								</div>
+								<div class="upload-file-container">
+									<span>
+										<input type="file" name="files[]" />
+									</span>
+								</div>
+								<div class="upload-file-container">
+									<span>
+										<input type="file" name="files[]" />
+									</span>
+								</div>
+								<div class="upload-file-container">
+									<span>
+										<input type="file" name="files[]" />
+									</span>
+								</div>
+								<div class="upload-file-container">
+									<span>
+										<input type="file" name="files[]" />
+									</span>
+								</div>
+								<div class="upload-file-container">
+									<span>
+										<input type="file" name="files[]" />
+									</span>
+								</div>								
+							</li>
+						</ul>
+					</fieldset>
+					
+					<fieldset id="seller-details">
+						<legend><span class="bold">Detalles</span> del vendedor</legend>
+						<ul class="field-content">
+							<li class="select-four">
+								<div>
+									<label for="input-name">Nombre: <span class="mandatory">*</span></label>
+									<input type="text" name="name" id="input-name" class="default-input" />
+								</div>
+								<div>
+									<label for="input-phone-1">Telefono: <span class="mandatory">*</span></label>
+									<input type="text" name="phone_1" id="input-phone-1" class="default-input" />
+								</div>
+								<div>
+									<label for="input-phone-2">Telefono 2: <span class="mandatory">*</span></label>
+									<input type="text" name="phone_2" id="input-phone-2" class="default-input" />
+								</div>
+								<div>
+									<label for="input-city">Ciudad: <span class="mandatory">*</span></label>
+									<input type="text" name="city" id="input-city" class="default-input" />
+								</div>
+							</li>
+							<li class="select-four"></li>
+						</ul>
+					</fieldset>
+					
+					<fieldset id="vehicle-submit" class="checkbox-selection">
+						<div>
+							<div class="agree-checkbox">
+								<input type="checkbox" value="agreed" id="check-agreed" /><label for="check-agreed">Estoy de acuerdo con los terminos y condiciones. </label>
+							</div>
+							<div class="submit-vehicle default-submit">
+								<input type="submit" value="enviar" />
+							</div>
+						</div>
+							
+					</fieldset>
+					
+				</form>				
+			</div>
+			
+		</div>
+	</section>
+	
+</div><!--#page-content-->
+	
+<footer>
+		<div class="layer-one">
+			<div class="content-holder">
+				<nav>
+					<ul>
+						<li><a href="#"><span class="bold">About</span> us</a>
+							<ul>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Our Partners</a></li>
+								<li><a href="#">Advertising Online</a></li>
+								<li><a href="#">Site Map</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><span class="bold">Need</span> Help?</a>
+							<ul>
+								<li><a href="#">How do I add an offer?</a></li>
+								<li><a href="#">How do I find a vehicle</a></li>
+								<li><a href="#">Price list</a></li>
+								<li><a href="#">Office for car dealers</a></li>
+							</ul>
+						</li>
+						<li><a href="#"><span class="bold">User</span> area</a>
+							<ul>
+								<li><a href="#">Add an offer</a></li>
+								<li><a href="#">Register dealder</a></li>
+								<li><a href="#">Login Dealer</a></li>
+								<li><a href="#">News</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+					
+				<div class="find-us-here col-amount">
+					<h3><span class="bold">Find</span> us here</h3>
+					<ul class="social-list">
+						<li class="social-facebook"><a href="#">Facebook</a></li>
+						<li class="social-twitter"><a href="#">Twitter</a></li>
+						<li class="social-google"><a href="#">Google</a></li>
+					</ul>
+					<p class="note">Become our fan, and we will love you forever</p>		
+				</div>
+			</div>
+		</div><!--.layer-one-->
+			
+		<div class="layer-two">
+			<div class="content-holder">
+				<p class="copyright">&copy; 2012 Automarket. All Rights Reserved</p>
+				<p class="webdesign-author">Webdesign by <a href="#">ClaPat Studio</a>
+			</div>
+		</div><!--.layer-two-->
+</footer>
+
+</body>
+</html>
