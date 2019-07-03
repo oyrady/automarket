@@ -34,7 +34,7 @@
 	<div class="content-holder">
 		<div class="layer-one">
 			<div class="page-titles">
-				<h1><a href="index.html">Automarket</a></h1>
+				<h1><a href="index.php">Automarket</a></h1>
 				<p class="sub-title">This is a title</p>
 			</div>
 				
@@ -49,7 +49,7 @@
 					<a href="#" class="box-content">Pages</a>
 					<ul>
 						
-                        <li><a href="index.html">Home page</a></li>
+                        <li><a href="index.php">Home page</a></li>
                         
                         <li><a href="add-vehicle.html">Add an offer</a></li>
                         

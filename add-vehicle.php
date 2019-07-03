@@ -34,7 +34,7 @@
 			</div>
 			
 			<div class="full-width sell-form <!--options-form-->">
-				<form action="php/cargar_auto.php" method="post">
+				<form action="php/cargar_auto.php" method="post" enctype="multipart/form-data">
 					<fieldset id="vehicle-data">
 						<legend><span class="bold">Datos del</span> Vehiculo</legend>
 						<ul class="field-content">
@@ -61,9 +61,9 @@
 									<label for="select-fabrication">Año de Fabricacion: <span class="mandatory">*</span></label>
 									<select id="select-fabrication" name="anio_fabricacion">
 										<option selected="selected">Select</option>
-										<option value="option1">Option 1</option>
-										<option value="option1">Option 2</option>
-										<option value="option1">Option 3</option>
+										<option value="2018">2018</option>
+										<option value="2017">2017</option>
+										<option value="2016">2016</option>
 									</select>
 								</div>
 							</li>
@@ -166,38 +166,70 @@
 					<fieldset id="vehicle-photos">
 						<legend><span class="bold">Fotos</span> Del Vehiculo</legend>
 						<ul class="field-content">
-							<li class="select-six">
-								<div class="upload-file-container" id="uno">
+							<!--li class="select-six">
+								<div class="upload-file-container">
 									<span>
-										<input type="file" name="files[]" div="uno" />
+										<input type="file" name="files_1"/>
 									</span>
 								</div>
-								<div class="upload-file-container" id="dos">
+								<div class="upload-file-container">
 									<span>
-										<input type="file" name="files[]" div="dos"/>
+										<input type="file" name="files_2"/>
 									</span>
 								</div>
-								<div class="upload-file-container" id="tres">
+								<div class="upload-file-container">
 									<span>
-										<input type="file" name="files[]" div="tres" />
+										<input type="file" name="files_3" />
 									</span>
 								</div>
-								<div class="upload-file-container" id="cuatro">
+								<div class="upload-file-container" >
 									<span>
-										<input type="file" name="files[]" div="cuatro" />
+										<input type="file" name="files_4"  />
 									</span>
 								</div>
-								<div class="upload-file-container" id="cinco">
+								<div class="upload-file-container">
 									<span>
-										<input type="file" name="files[]" div="cinco" />
+										<input type="file" name="files_5" />
 									</span>
 								</div>
-								<div class="upload-file-container" id="seis">
+								<div class="upload-file-container">
 									<span>
-										<input type="file" name="files[]" div="seis"/>
+										<input type="file" name="files_6"/>
 									</span>
 								</div>								
-							</li>
+							</li-->
+							<li class="select-six">
+								<div class="upload">
+									
+										<input type="file" name="files_1"/>
+									
+								</div>
+								<div class="upload">
+									
+										<input type="file" name="files_2"/>
+									
+								</div>
+								<div class="upload">
+									
+										<input type="file" name="files_3" />
+									
+								</div>
+								<div class="upload" >
+									
+										<input type="file" name="files_4"  />
+								
+								</div>
+								<div class="upload">
+									
+										<input type="file" name="files_5" />
+								
+								</div>
+								<div class="upload">
+								
+										<input type="file" name="files_6"/>
+									
+								</div>								
+							</li-->
 						</ul>
 					</fieldset>
 					
@@ -207,19 +239,19 @@
 							<li class="select-four">
 								<div>
 									<label for="input-name">Nombre: <span class="mandatory">*</span></label>
-									<input type="text" name="name" id="input-name" class="default-input" />
+									<input type="text" name="nombre" id="input-name" class="default-input" />
 								</div>
 								<div>
 									<label for="input-phone-1">Telefono: <span class="mandatory">*</span></label>
-									<input type="text" name="phone_1" id="input-phone-1" class="default-input" />
+									<input type="text" name="telefono_1" id="input-phone-1" class="default-input" />
 								</div>
 								<div>
 									<label for="input-phone-2">Telefono 2: <span class="mandatory">*</span></label>
-									<input type="text" name="phone_2" id="input-phone-2" class="default-input" />
+									<input type="text" name="telefono_2" id="input-phone-2" class="default-input" />
 								</div>
 								<div>
 									<label for="input-city">Ciudad: <span class="mandatory">*</span></label>
-									<input type="text" name="city" id="input-city" class="default-input" />
+									<input type="text" name="ciudad" id="input-city" class="default-input" />
 								</div>
 							</li>
 							<li class="select-four"></li>
@@ -229,7 +261,7 @@
 					<fieldset id="vehicle-submit" class="checkbox-selection">
 						<div>
 							<div class="agree-checkbox">
-								<input type="checkbox" value="agreed" id="check-agreed" /><label for="check-agreed">Estoy de acuerdo con los terminos y condiciones. </label>
+								<input type="checkbox" value="1" name="tc" id="check-agreed" /><label for="check-agreed">Estoy de acuerdo con los terminos y condiciones. </label>
 							</div>
 							<div class="submit-vehicle default-submit">
 								<input type="submit" value="enviar" />

@@ -2,7 +2,10 @@
 include("core.php");
 include('class.upload.php');
 if(isset($_POST['marca'])){
-
+if(!isset($_POST['tc'])){
+    echo respuesta("Debes aceptar los terminos y condiciones","danger");
+    exit;
+}
     if(isset($_FILES)){
        
         $nombres_img = array();
