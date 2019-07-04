@@ -2,6 +2,7 @@
 <div id="page-content">
 
 	<section id="car-pagination">
+		
 		<div class="content-holder">
 			<div class="page-main-heading extra-space">
 				<div class="heading-location">
@@ -34,7 +35,7 @@
 			</div>
 			
 			<div class="full-width sell-form <!--options-form-->">
-				<form action="php/cargar_auto.php" method="post" enctype="multipart/form-data">
+				<form action="php/cargar_auto.php" method="post" enctype="multipart/form-data" id="envio_formulario">
 					<fieldset id="vehicle-data">
 						<legend><span class="bold">Datos del</span> Vehiculo</legend>
 						<ul class="field-content">
@@ -73,9 +74,9 @@
 									<label for="select-fuel-type">Tipo de combustible: <span class="mandatory">*</span></label>
 									<select id="select-fuel-type" name="combustible">
 										<option selected="selected">Seleccionar</option>
-										<option value="option1">Naftero</option>
-										<option value="option1">Diesel</option>
-										<option value="option1">Gnc</option>
+										<option value="Naftero">Naftero</option>
+										<option value="Diesel">Diesel</option>
+										<option value="GNC">Gnc</option>
 									</select>
 								</div>
 								<div>
@@ -263,14 +264,17 @@
 							<div class="agree-checkbox">
 								<input type="checkbox" value="1" name="tc" id="check-agreed" /><label for="check-agreed">Estoy de acuerdo con los terminos y condiciones. </label>
 							</div>
-							<div class="submit-vehicle default-submit">
-								<input type="submit" value="enviar" />
+						
+							<div class="submit-vehicle default-submit" >
+							<span id='cargador' style='display:none;'>Procesando...</span>
+								<input type="submit" value="enviar"  id="envio" />
 							</div>
 						</div>
 							
 					</fieldset>
 					
-				</form>				
+				</form>			
+				<div id="respuesta"></div>	
 			</div>
 			
 		</div>
@@ -281,3 +285,30 @@
 
 
 <?php include("footer.php");?>
+
+<script>
+	$( document ).ready(function() {
+$('#envio_formulario').submit(function(evt) {
+	$('#respuesta').html("");
+	$("#envio").hide();
+	$("#cargador").show();
+    evt.preventDefault();
+ 
+    var formData = new FormData(this);
+ 
+    $.ajax({
+	    type: 'POST',
+	    url: $(this).attr('action'),
+	    data:formData,
+	    cache:false,
+	    contentType: false,
+	    processData: false,
+	    success: function(data) {
+			$("#envio").show();
+	        $("#cargador").hide();
+	        $('#respuesta').html(data);
+	    }
+    });
+});
+});
+</script>

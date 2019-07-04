@@ -17,6 +17,21 @@ class Core {
         return $return;
     }
 
+    public function ConsultaVehiculos(){
+        $consulta = ("SELECT * FROM vehiculos");
+        $procesar = mysqli_query($_SESSION['conexion_database'],$consulta) or die(mysqli_error($_SESSION['conexion_database']));
+        if(mysqli_num_rows($procesar)<=0){
+            return "error";
+        }else{
+            $return = array();
+            while($row = mysqli_fetch_array($procesar)){
+                array_push($return,$row);
+            }
+        }
+
+        return $return;
+    }
+
     public function RegistrarVehiculo($campos,$values){
 
         $campos = implode(",",$campos);
