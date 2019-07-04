@@ -1,9 +1,9 @@
 <?php session_start();
    //conexion.php 
    $servidor="localhost";
-   $usuarios="root";
-   $password="23587530";
- $db="automarket";
+   $usuarios="u400317780_bapti";
+   $password="FJqUdj30WVg3";
+ $db="u400317780_autos";
    $conexion=mysqli_connect($servidor,$usuarios,$password) or die("Error conectando...");
  $_SESSION['conexion_database']=$conexion;
  mysqli_select_db($conexion,$db) or die("No consigue la base de datos");

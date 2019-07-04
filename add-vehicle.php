@@ -1,4 +1,4 @@
-<?php include("cabecera.php"); ?>
+﻿<?php include("cabecera.php"); ?>
 <div id="page-content">
 
 	<section id="car-pagination">
@@ -152,7 +152,7 @@
 									<label for="select-currency">Moneda: <span class="mandatory">*</span></label>
 									<select id="select-currency" name="moneda">
 										<option selected="selected">Pesos</option>
-										<option value="option1">Dolar</option>
+										<option>Dolar</option>
 										
 									</select>
 								</div>
